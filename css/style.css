@@ -5,3 +5,22 @@
     bottom: 0px;
     width: 100%;
 }
+
+.mylogin{
+    background-color: aqua;
+	width: 50%;
+	border-radius: 20px;
+	box-shadow: 0 5px 5px rgba(0,0,0,.4);
+	margin: 5em auto;
+	display: flex;
+}
+
+.logo-ues-login{
+    background-color: #008080;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #fff
+}
