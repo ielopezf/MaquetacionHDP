@@ -1,2 +1,2 @@
 # MaquetacionHDP
-Maquetacion del proyecto para la materia de HDP155 Ciclo 1 del año 2022, en la modalidad distancia.
+Maquetacion del proyecto gestor de asistencias y notas de los alumnos de la carrera de ingenieria en sistemas informaticos de la universidad de El Salvador, para la materia de HDP115 Ciclo 1 del año 2022, en la modalidad distancia.
