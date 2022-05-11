@@ -5,30 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container login-container mylogin">
         <div class="row">
-            <div class="col-md-6 login-form-1">
-                l
-                d
+            <div class="col-md-6">
+                <img src="images/minervarojo.png">    
             </div>
-            <div class="col-md-6 login-form-2">
-                <h3>Login for Form 2</h3>
-                <form>
+            <div class="col-md-6">
+                <h3 style="margin-top: 100px;margin-bottom: 30px; text-align: center;">Inicio de Sesión</h3>
+                <form class="" style="margin-bottom: 100px;">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Email *" value="" />
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                          <label for="floatingInput">Usuario</label>
+                        </div>
+                        <div class="form-floating">
+                          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                          <label for="floatingPassword">Contraseña</label>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Your Password *" value="" />
+                        <button type="button" class="btn btn-outline-primary" value="Login">Ingresar</button>
                     </div>
                     <div class="form-group">
-                        <input type="submit" class="btnSubmit" value="Login" />
-                    </div>
-                    <div class="form-group">
-
                         <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
                     </div>
                 </form>
