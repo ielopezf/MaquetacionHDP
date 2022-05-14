@@ -15,12 +15,25 @@
 .mylogin{
     margin-top: 150px;
     display: flex;
-    align-items: center;
-	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #fff;
-	width: 50%;
+	width: 60%;
     box-shadow: 0 8px 8px 0 rgba(190, 190, 190, 0.2), 0 9px 26px 0 rgba(190, 190, 190, 0.2);
 }
+
+.mylogin-div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mylogin-div2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .mymenu-lateral{
     height: 50px;
