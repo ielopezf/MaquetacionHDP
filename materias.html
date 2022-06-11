@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="Pagina de inicio" />
+    <meta name="author" content="Grupo 2 - HDP115" />
     <title>Materias - Admin</title>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="sb-nav-fixed">
@@ -33,11 +33,11 @@
                                     Cargo
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="perfilConfi.html">Configuración</a></li>
+                                    <li><a class="dropdown-item" href="#!">Configuración</a></li>
                                     <li>
                                         <hr class="dropdown-divider" />
                                     </li>
-                                    <li><a class="dropdown-item" href="login.html">Salir</a></li>
+                                    <li><a class="dropdown-item" href="#!">Salir</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -47,7 +47,7 @@
                         <a class="nav-link" href="docentes.html">
                             Docentes
                         </a>
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                        <a class="nav-link collapsed" href="#!" data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             Estudiantes
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -80,10 +80,60 @@
                         <li class="breadcrumb-item active">Dashboard</li>
                     </ol>
                     <div class="row">
-
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-2">
+                                    <label for="inputEmail4">Nombre</label>
+                                    <input type="text" class="form-control" placeholder="First name">
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputPassword4">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword4"
+                                        placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress">Address</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress2">Address 2</label>
+                                <input type="text" class="form-control" id="inputAddress2"
+                                    placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">City</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">State</label>
+                                    <select id="inputState" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputZip">Zip</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                        Check me out
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </form>
                     </div>
+                    <br>
+                    <br>
                     <div class="card mb-4">
                         <div class="card-header">
+                            <i class="fas fa-table me-1"></i>
                             DataTable Example
                         </div>
                         <div class="card-body">
