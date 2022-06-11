@@ -75,19 +75,19 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-2">Dashboard</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Dashboard</li>
-                    </ol>
+                    <h1 class="mt-2">Asistencias</h1>
                     <div class="row">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="inputBuscar">Buscar</label>
-                                    <input type="text" class="form-control" placeholder="Buscar">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Buscar</button>
+                        <div class="form-row">
+                            <div class="form-group md-2">
+                                <label for="inputBuscar">Clase</label>
+                                <input type="text" class="form-control" placeholder="Buscar una clase">
                             </div>
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </div>
+                        <form class="p-3">
+                            <ol class="breadcrumb mb-4">
+                                <li class="breadcrumb-item active">Información General de la Clase</li>
+                            </ol>
                             <div class="form-row">
                                 <div class="form-group col-md-2">
                                     <label for="inputMateria">Materia</label>
@@ -114,12 +114,20 @@
                             </div>
                         </form>
                     </div>
-                    <br>
-                    <br>
+
+                    <!--Tabla donce muestra estudiantes-->
                     <div class="card mb-4">
                         <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            DataTable Example
+                            <ol class="breadcrumb mb-4">
+                                <li class="breadcrumb-item active">Estudiantes</li>
+                            </ol>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputBuscar">Buscar</label>
+                                    <input type="text" class="form-control" placeholder="Buscar estudiantes">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Buscar</button>
+                            </div>
                         </div>
                         <div class="card-body">
                             <table id="datatablesSimple">
@@ -604,6 +612,7 @@
                             </table>
                         </div>
                     </div>
+
                 </div>
             </main>
         </div>
