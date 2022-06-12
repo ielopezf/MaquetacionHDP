@@ -46,7 +46,7 @@ function loadUser() {
 
 function cargarCalificaciones(idmateria){
   const xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "http://localhost:8081/apis/ClaseController/getCalificacion?id="+idmateria);
+  xhttp.open("GET", "http://localhost:8081/apis/calificacionController/getCalificacionXMateriaId?id="+idmateria);
   xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhttp.setRequestHeader("Authorization", jwt);
   xhttp.send();
@@ -56,7 +56,17 @@ function cargarCalificaciones(idmateria){
       const calificaciones = objects['dataset'][0];
       console.log(objects);
       if (objects["status"] === true) {
-        console.log(calificaciones);
+        document.getElementById("bodycalificaciones").innerHTML = '';
+        calificaciones.forEach(calificacion => {
+          const row = document.createElement("tr");
+          for (let i = 0; i < 3; i++) {
+            const column = document.createElement("td");
+            const textnode = document.createTextNode(calificacion[i]);
+            column.appendChild(textnode);
+            row.appendChild(column);
+            document.getElementById("bodycalificaciones").appendChild(row);
+          }
+        });
       }
     }
   };

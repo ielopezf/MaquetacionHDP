@@ -101,69 +101,28 @@
                         </div>
                     </div>
 
-                    <!--Tabla donce muestra estudiantes-->
+                    <!--Tabla donde muestra calificaciones-->
                     <div class="card mb-4">
                         <div class="card-header">
-                            <h3>Estudiantes</h3>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputBuscar">Buscar</label>
-                                    <input type="text" class="form-control" placeholder="Buscar estudiantes">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Buscar</button>
-                            </div>
+                            <h3>Calificaciones</h3>
                         </div>
                         <div class="card-body">
-                            <table class="table" id="datatablesSimple">
+                            <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Carnet</th>
-                                        <th>Nombre</th>
-                                        <th>Nota 1</th>
-                                        <th>Nota 2</th>
-                                        <th>Nota 3</th>
-                                        <th>Global</th>
+                                        <th>Estudiante</th>
+                                        <th>Calificación</th>
+                                        <th>Evaluación</th>
                                     </tr>
                                 </thead>
-                                <tfoot>
-                                    <tr>
-                                        <th>Carnet</th>
-                                        <th>Nombre</th>
-                                        <th>Nota 1</th>
-                                        <th>Nota 2</th>
-                                        <th>Nota 3</th>
-                                        <th>Global</th>
-                                    </tr>
-                                </tfoot>
-                                <tbody>
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Garrett Winters</td>
-                                        <td>Accountant</td>
-                                        <td>Tokyo</td>
-                                        <td>63</td>
-                                        <td>2011/07/25</td>
-                                        <td>$170,750</td>
-                                    </tr>
+                                <tbody id="bodycalificaciones">
+
                                 </tbody>
                             </table>
                         </div>
                     </div>
+
+
 
                 </div>
             </main>
