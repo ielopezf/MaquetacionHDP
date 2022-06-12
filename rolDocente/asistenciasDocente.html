@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Pagina de inicio" />
     <meta name="author" content="Grupo 2 - HDP115" />
-    <title>Materias - Admin</title>
+    <title>Asistencias - Admin</title>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
@@ -44,7 +44,7 @@
                         <a class="nav-link" href="index.html">
                             Inicio
                         </a>
-                        <a class="nav-link" href="docentesaAdmin.html">
+                        <a class="nav-link" href="docentesAdmin.html">
                             Docentes
                         </a>
                         <a class="nav-link collapsed" href="#!" data-bs-toggle="collapse"
@@ -68,78 +68,154 @@
                 </div>
             </nav>
         </div>
-
         <!--Contenido-->
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-2">Materias</h1>
+                    <h1 class="mt-2">Asistencias</h1>
                     <div class="row">
                         <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <label for="inputBuscar">Materia</label>
-                                <input type="text" class="form-control" placeholder="Buscar una materia">
+                            <div class="form-group md-2">
+                                <label for="inputBuscar">Clase</label>
+                                <input type="text" class="form-control" placeholder="Buscar una clase">
                             </div>
                             <button type="submit" class="btn btn-primary">Buscar</button>
-                            <button type="submit" class="btn btn-info" style="color: white;">Agregar</button>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <label for="inputBuscar">Docente</label>
-                                <input type="text" class="form-control" placeholder="Buscar">
-                            </div>
-
-                            <div class="form-group col-md-2">
-                                <label for="inputBuscar">Año</label>
-                                <input type="text" class="form-control" placeholder="Buscar">
-                            </div>
                         </div>
                     </div>
-                    <!--Tabla donce muestra lista de materias-->
                     <div class="card mb-4" style="margin-top: 20px;">
+                        <div class="card-header">
+                            <h3>Información General de la Clase</h3>
+                        </div>
                         <div class="card-body">
-                            <table class="table" id="datatablesSimple">
+                            <form>
+                                <div class="form-row-inline">
+                                    <div class="form-group col-md-2">
+                                        <label for="inputMateria">Materia</label>
+                                        <input type="text" class="form-control" id="inputMateria" placeholder="Materia">
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputCiclo">Ciclo</label>
+                                        <input type="text" class="form-control" id="inputCiclo" placeholder="Ciclo">
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputAnio">Año</label>
+                                        <input type="text" class="form-control" id="inputAnio" placeholder="Año">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-2">
+                                        <label for="inputGrupo">Grupo</label>
+                                        <input type="text" class="form-control" id="inputGrupo" placeholder="Grupo">
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputHorario">Horario</label>
+                                        <input type="text" class="form-control" id="inputHorario" placeholder="Horario">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!--Tabla donde muestra docentes-->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h3>Docentes</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
                                         <th>Nombre</th>
-                                        <th>Ciclo</th>
-                                        <th>Año</th>
-                                        <th>Acciones</th>
+                                        <th>Correo</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>Tiger Nixon</td>
                                         <td>System Architect</td>
-                                        <td>20xx</td>
                                         <td>Edinburgh</td>
-                                        <td>
-                                            <button type="submit" class="btn btn-primary">Ver</button>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Tiger Nixon</td>
                                         <td>System Architect</td>
                                         <td>Edinburgh</td>
-                                        <td>20xx</td>
-                                        <td>
-                                            <button type="submit" class="btn btn-primary">Ver</button>
-                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Garrett Winters</td>
                                         <td>Accountant</td>
-                                        <td>20xx</td>
-                                        <td>Edinburgh</td>
-                                        <td>
-                                            <button type="submit" class="btn btn-primary">Ver</button>
-                                        </td>
+                                        <td>Tokyo</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
+
+                    <!--Tabla donce muestra estudiantes-->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h3>Estudiantes</h3>
+                            </ol>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputBuscar">Buscar</label>
+                                    <input type="text" class="form-control" placeholder="Buscar estudiantes">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Buscar</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table" id="datatablesSimple">
+                                <thead>
+                                    <tr>
+                                        <th>Carnet</th>
+                                        <th>Nombre</th>
+                                        <th>Fecha</th>
+                                        <th>Fecha</th>
+                                        <th>Fecha</th>
+                                        <th>Fecha</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Carnet</th>
+                                        <th>Nombre</th>
+                                        <th>Fecha</th>
+                                        <th>FEcha</th>
+                                        <th>Fecha</th>
+                                        <th>Fecha</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <tr>
+                                        <td>Tiger Nixon</td>
+                                        <td>System Architect</td>
+                                        <td>Edinburgh</td>
+                                        <td>61</td>
+                                        <td>2011/04/25</td>
+                                        <td>$320,800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tiger Nixon</td>
+                                        <td>System Architect</td>
+                                        <td>Edinburgh</td>
+                                        <td>61</td>
+                                        <td>2011/04/25</td>
+                                        <td>$320,800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Garrett Winters</td>
+                                        <td>Accountant</td>
+                                        <td>Tokyo</td>
+                                        <td>63</td>
+                                        <td>2011/07/25</td>
+                                        <td>$170,750</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
                 </div>
             </main>
         </div>
