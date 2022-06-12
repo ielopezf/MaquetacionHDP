@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Pagina de inicio" />
     <meta name="author" content="Grupo 2 - HDP115" />
-    <title>Calificaciones - Admin</title>
+    <title>Asistencias - Docente</title>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
 </head>
 
 <body class="sb-nav-fixed">
@@ -20,33 +19,30 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="card" style="width: 11rem;">
-                        <img class="card-img-top" src="assets/img/minerva_red.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="../assets/img/minerva_red.jpg" alt="Card image cap">
                     </div>
                     <div class="nav">
                         <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="assets/img/Unknown_person.jpg" class="rounded float-start" alt="..."
+                                    <img src="../assets/img/Unknown_person.jpg" class="rounded float-start" alt="..."
                                         style="width: 3rem;">
                                     Nombre
                                     <br>
                                     Cargo
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="confiAdmin.html">Configuración</a></li>
+                                    <li><a class="dropdown-item" href="confiDocente.html">Configuración</a></li>
                                     <li>
                                         <hr class="dropdown-divider" />
                                     </li>
-                                    <li><a class="dropdown-item" href="login.html">Salir</a></li>
+                                    <li><a class="dropdown-item" href="../login.html">Salir</a></li>
                                 </ul>
                             </li>
                         </ul>
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="inicioDocente.html">
                             Inicio
-                        </a>
-                        <a class="nav-link" href="docentesAdmin.html">
-                            Docentes
                         </a>
                         <a class="nav-link collapsed" href="#!" data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -56,11 +52,11 @@
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="asistenciasAdmin.html">Asistencias</a>
-                                <a class="nav-link" href="calificacionesAdmin.html">Calificaciones</a>
+                                <a class="nav-link" href="asistenciasDocente.html">Asistencias</a>
+                                <a class="nav-link" href="calificacionesDocente.html">Calificaciones</a>
                             </nav>
                         </div>
-                        <a class="nav-link" href="materiasAdmin.html">Materias</a>
+                        <a class="nav-link" href="materiasDocente.html">Materias</a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
@@ -73,184 +69,7 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-2">Calificaciones</h1>
-                    <div class="row">
-
-                    </div>
-                    <div class="card mb-4" style="margin-top: 20px;">
-                    </div>
-
-                    <!--Tabla donde muestra materias-->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h3>Materias</h3>
-                        </div>
-                        <div class="card-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Id</th>
-                                        <th>Código</th>
-                                        <th>Nombre</th>
-                                        <th>Acción</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="bodymaterias">
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!--Tabla donce muestra estudiantes-->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h3>Estudiantes</h3>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="inputBuscar">Buscar</label>
-                                    <input type="text" class="form-control" placeholder="Buscar estudiantes">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Buscar</button>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <table class="table" id="datatablesSimple">
-                                <thead>
-                                    <tr>
-                                        <th>Carnet</th>
-                                        <th>Nombre</th>
-                                        <th>Nota 1</th>
-                                        <th>Nota 2</th>
-                                        <th>Nota 3</th>
-                                        <th>Global</th>
-                                    </tr>
-                                </thead>
-                                <tfoot>
-                                    <tr>
-                                        <th>Carnet</th>
-                                        <th>Nombre</th>
-                                        <th>Nota 1</th>
-                                        <th>Nota 2</th>
-                                        <th>Nota 3</th>
-                                        <th>Global</th>
-                                    </tr>
-                                </tfoot>
-                                <tbody>
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Garrett Winters</td>
-                                        <td>Accountant</td>
-                                        <td>Tokyo</td>
-                                        <td>63</td>
-                                        <td>2011/07/25</td>
-                                        <td>$170,750</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-            </main>
-        </div>
-    </div>
-<script src="./js/calificacionesAdmin.js"></script>
-</body>
-
-</html>
-||||||| 1c22218
-=======
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Pagina de inicio" />
-    <meta name="author" content="Grupo 2 - HDP115" />
-    <title>Calificaciones - Admin</title>
-    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-</head>
-
-<body class="sb-nav-fixed">
-    <div id="layoutSidenav">
-        <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                <div class="sb-sidenav-menu">
-                    <div class="card" style="width: 11rem;">
-                        <img class="card-img-top" src="assets/img/minerva_red.jpg" alt="Card image cap">
-                    </div>
-                    <div class="nav">
-                        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="assets/img/Unknown_person.jpg" class="rounded float-start" alt="..."
-                                        style="width: 3rem;">
-                                    Nombre
-                                    <br>
-                                    Cargo
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="confiAdmin.html">Configuración</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider" />
-                                    </li>
-                                    <li><a class="dropdown-item" href="login.html">Salir</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <a class="nav-link" href="index.html">
-                            Inicio
-                        </a>
-                        <a class="nav-link" href="docentesAdmin.html">
-                            Docentes
-                        </a>
-                        <a class="nav-link collapsed" href="#!" data-bs-toggle="collapse"
-                            data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                            Estudiantes
-                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                        </a>
-                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
-                            data-bs-parent="#sidenavAccordion">
-                            <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="asistenciasAdmin.html">Asistencias</a>
-                                <a class="nav-link" href="calificacionesAdmin.html">Calificaciones</a>
-                            </nav>
-                        </div>
-                        <a class="nav-link" href="materiasAdmin.html">Materias</a>
-                    </div>
-                </div>
-                <div class="sb-sidenav-footer">
-                    <div class="small">Copyright © 2022</div>
-                    Grupo 2, HDP115 - Universidad de El Salvador
-                </div>
-            </nav>
-        </div>
-        <!--Contenido-->
-        <div id="layoutSidenav_content">
-            <main>
-                <div class="container-fluid px-4">
-                    <h1 class="mt-2">Calificaciones</h1>
+                    <h1 class="mt-2">Asistencias</h1>
                     <div class="row">
                         <div class="form-row">
                             <div class="form-group md-2">
@@ -266,7 +85,7 @@
                         </div>
                         <div class="card-body">
                             <form>
-                                <div class="form-row">
+                                <div class="form-row-inline">
                                     <div class="form-group col-md-2">
                                         <label for="inputMateria">Materia</label>
                                         <input type="text" class="form-control" id="inputMateria" placeholder="Materia">
@@ -348,20 +167,20 @@
                                     <tr>
                                         <th>Carnet</th>
                                         <th>Nombre</th>
-                                        <th>Nota 1</th>
-                                        <th>Nota 2</th>
-                                        <th>Nota 3</th>
-                                        <th>Global</th>
+                                        <th>Fecha</th>
+                                        <th>Fecha</th>
+                                        <th>Fecha</th>
+                                        <th>Fecha</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
                                     <tr>
                                         <th>Carnet</th>
                                         <th>Nombre</th>
-                                        <th>Nota 1</th>
-                                        <th>Nota 2</th>
-                                        <th>Nota 3</th>
-                                        <th>Global</th>
+                                        <th>Fecha</th>
+                                        <th>FEcha</th>
+                                        <th>Fecha</th>
+                                        <th>Fecha</th>
                                     </tr>
                                 </tfoot>
                                 <tbody>
@@ -400,13 +219,12 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/chart-area-demo.js"></script>
-    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="../assets/demo/chart-area-demo.js"></script>
+    <script src="../assets/demo/chart-bar-demo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-    <script src="js/datatables-simple-demo.js"></script>
+    <script src="../js/datatables-simple-demo.js"></script>
 </body>
 
 </html>
->>>>>>> origin/maqueta
