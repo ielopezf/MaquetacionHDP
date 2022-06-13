@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Pagina de inicio" />
     <meta name="author" content="Grupo 2 - HDP115" />
-    <title>Asistencias - Admin</title>
+    <title>Calificaciones - Admin</title>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
@@ -73,122 +73,63 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-2">Asistencias</h1>
+                    <h1 class="mt-2">Asistencia</h1>
                     <div class="row">
-                        <div class="form-row row">
-                            <div class="form-group col-12 col-md-6 mb-4">
-                                <label for="inputBuscar">Clase</label>
-                                <input type="text" class="form-control" placeholder="Buscar una clase">
-                            </div>
-                            <button type="submit" class="btn btn-primary col-md-1">Buscar</button>
-                        </div>
+
                     </div>
                     <div class="card mb-4" style="margin-top: 20px;">
-                        <div class="card-header">
-                            Información General
-                        </div>
-                        <div class="card-body">
-                            <div class="form-row row">
-                                <div class="form-group col-12 col-md-6 mb-4">
-                                    <label for="inputMateria">Materia</label>
-                                    <input type="text" class="form-control" id="inputMateria" placeholder="Materia">
-                                </div>
-                                <div class="form-group col-12 col-md-6 mb-4">
-                                    <label for="inputCiclo">Ciclo</label>
-                                    <select type="text" id="inputCiclo" placeholder="" class="form-control">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-12 col-md-6 mb-4">
-                                    <label for="inputYear">Año</label>
-                                    <input type="text" id="inputYear" placeholder="" class="form-control">
-                                </div>
-                                <div class="form-group col-12 col-md-6 mb-4">
-                                    <label for="input">Grupo</label>
-                                    <input type="textGrupo" id="inputGrupo" placeholder="" class="form-control">
-                                </div>
-                                <div class="form-group col-12 col-md-6 mb-4">
-                                    <label for="inputHorario">Horario</label>
-                                    <input type="text" id="inputHorario" placeholder="" class="form-control">
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    <!--Tabla donce muestra docentes-->
-                    <br>
+
+                    <!--Tabla donde muestra materias-->
                     <div class="card mb-4">
                         <div class="card-header">
-                            Docentes
+                            <h3>Materias</h3>
                         </div>
                         <div class="card-body">
-                            <table id="datatablesSimpleDocentes" class="table datatablesSimple--element">
+                            <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>Id</th>
+                                        <th>Código</th>
                                         <th>Nombre</th>
-                                        <th>Correo</th>
-                                        <th>Estado</th>
-                                        <th></th>
+                                        <th>Acción</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>000</td>
-                                        <td>Nombre</td>
-                                        <td>@ues.edu.sv</td>
-                                        <td>Activo</td>
-                                        <td>
-                                            <button class="btn btn-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <!--Tabla donde muestra estudiantes-->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            Estudiantes
-                        </div>
-                        <div class="card-body">
-                            <table id="datatablesSimpleEstudiantes" class="table datatablesSimple--element">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nombre</th>
-                                        <th>Correo</th>
-                                        <th>Matricula</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>000</td>
-                                        <td>Nombre</td>
-                                        <td>@ues.edu.sv</td>
-                                        <td>1</td>
-                                        <td>
-                                            <button class="btn btn-danger">Eliminar</button>
-                                        </td>
-                                    </tr>
+                                <tbody id="bodymaterias">
+
                                 </tbody>
                             </table>
                         </div>
                     </div>
 
+                    <!--Tabla donde muestra calificaciones-->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h3>Asistencias</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Estudiante</th>
+                                        <th>Grupo</th>
+                                        <th>Carnet alumno</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="bodycalificaciones">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </main>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/demo/chart-area-demo.js"></script>
-    <script src="/assets/demo/chart-bar-demo.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-    <script src="/js/datatables-simple-demo.js"></script>
+<script src="./js/asistenciasAdmin.js"></script>
 </body>
 
 </html>
@@ -203,7 +144,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Pagina de inicio" />
     <meta name="author" content="Grupo 2 - HDP115" />
-    <title>Asistencias - Admin</title>
+    <title>Calificaciones - Admin</title>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
@@ -268,7 +209,7 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-2">Asistencias</h1>
+                    <h1 class="mt-2">Calificaciones</h1>
                     <div class="row">
                         <div class="form-row">
                             <div class="form-group md-2">
@@ -284,7 +225,7 @@
                         </div>
                         <div class="card-body">
                             <form>
-                                <div class="form-row-inline">
+                                <div class="form-row">
                                     <div class="form-group col-md-2">
                                         <label for="inputMateria">Materia</label>
                                         <input type="text" class="form-control" id="inputMateria" placeholder="Materia">
@@ -366,20 +307,20 @@
                                     <tr>
                                         <th>Carnet</th>
                                         <th>Nombre</th>
-                                        <th>Fecha</th>
-                                        <th>Fecha</th>
-                                        <th>Fecha</th>
-                                        <th>Fecha</th>
+                                        <th>Nota 1</th>
+                                        <th>Nota 2</th>
+                                        <th>Nota 3</th>
+                                        <th>Global</th>
                                     </tr>
                                 </thead>
                                 <tfoot>
                                     <tr>
                                         <th>Carnet</th>
                                         <th>Nombre</th>
-                                        <th>Fecha</th>
-                                        <th>FEcha</th>
-                                        <th>Fecha</th>
-                                        <th>Fecha</th>
+                                        <th>Nota 1</th>
+                                        <th>Nota 2</th>
+                                        <th>Nota 3</th>
+                                        <th>Global</th>
                                     </tr>
                                 </tfoot>
                                 <tbody>
@@ -427,4 +368,3 @@
 </body>
 
 </html>
->>>>>>> origin/maqueta
